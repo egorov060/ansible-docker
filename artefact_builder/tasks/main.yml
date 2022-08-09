@@ -1,2 +1,24 @@
 ---
 # tasks file for artefact_builder
+- name: Ensure jdk packages is present
+  apt: name=default-jdk state=present
+
+- name: Ensure maven packages is present
+  apt: name=maven state=present
+
+- name: Git clone
+  git:
+    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+    dest: /opt/
+    clone: yes
+    update: yes
+- name: artefactory assembly
+  command: mvn package
+  args:
+    chdir: /opt/
+
+- name: copy artefactory
+  synchronize:
+    mode: pull
+    src: '/opt/target/hello-1.0.war' 
+    dest: '/home/master/ansible-roles/tomcat/files/'
