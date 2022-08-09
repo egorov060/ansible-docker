@@ -1,2 +1,12 @@
 ---
 # tasks file for docker_prod
+- name: Ensure docker packages is present
+  apt: name=docker.io state=present
+
+- name: Container present
+  community.docker.docker_container:
+    name: prod
+    state: present
+    image: tomcat:jre8-alpine
+    volumes:
+      - hello-1.0.war:{{dest_folder}}
