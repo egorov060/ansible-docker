@@ -8,7 +8,7 @@
   docker_container:
     name: prod
     image: tomcat:latest
-    state: present
+    state: started
 #  copy:
 #    src: /home/master/ansible-roles/artefact_builder/files/
 #    dest: "{{dest_folder}}"
