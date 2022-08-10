@@ -15,4 +15,4 @@
     ports:
      - "8080:8080"
     volumes:
-     - ./hello-1.0.war:/var/lib/tomcat9/webapps/
+     - /var/lib/tomcat9/webapps/
