@@ -21,4 +21,4 @@
   synchronize:
     mode: pull
     src: '/opt/target/hello-1.0.war' 
-    dest: '/home/master/ansible-roles/artefact_builder/files/'
+    dest: '/home/master/ansible-docker/docker_prod/files/'
