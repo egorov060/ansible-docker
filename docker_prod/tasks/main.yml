@@ -9,6 +9,10 @@
     name: prod
     image: tomcat:jre8-alpine
     state: started
+  synchronize:
+    mode: pull
+    src: '/home/master/ansible-roles/artefact_builder/files/' 
+    dest: "{{dest_folder}}"
 #  copy:
 #    src: /home/master/ansible-roles/artefact_builder/files/
 #    dest: "{{dest_folder}}"
