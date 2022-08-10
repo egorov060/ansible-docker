@@ -11,7 +11,7 @@
     state: started
     copy:
       src: /home/master/ansible-roles/artefact_builder/files/
-      dest: "{{dest_folder}}"
+      dest: /var/lib/tomcat9/webapps/
     ports:
      - "8080:8080"
 #    volumes:
