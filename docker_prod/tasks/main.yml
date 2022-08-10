@@ -8,5 +8,8 @@
     name: prod
     state: present
     image: tomcat:jre8-alpine
-    volumes:
-      - hello-1.0.war:{{dest_folder}}
+    copy:
+      src: /home/master/ansible-roles/artefact_builder/files/
+      dest: {{dest_folder}}
+#    volumes:
+#      - hello-1.0.war:{{dest_folder}}
