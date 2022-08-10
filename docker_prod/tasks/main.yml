@@ -10,6 +10,6 @@
     image: tomcat:jre8-alpine
     copy:
       src: /home/master/ansible-roles/artefact_builder/files/
-      dest: {{dest_folder}}
+      dest: "{{dest_folder}}"
 #    volumes:
 #      - hello-1.0.war:{{dest_folder}}
