@@ -11,7 +11,7 @@
 #  copy:
 #    src: /home/master/ansible-roles/artefact_builder/files/
 #    dest: "{{dest_folder}}"
-    ports:
-     - "8080:8080"
+  ports:
+   - "8080:8080"
 #    volumes:
 #      - hello-1.0.war:{{dest_folder}}
