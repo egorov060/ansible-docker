@@ -8,11 +8,11 @@
   docker_container:
     name: prod
     image: tomcat:jre8-alpine
-#    copy:
-#      src: '/home/master/ansible-roles/artefact_builder/files/'
-#      dest: '/var/lib/tomcat9/webapps/'
+    copy:
+      src: '/home/master/ansible-roles/artefact_builder/files/'
+      dest: '/var/lib/tomcat9/webapps/'
     state: started
     ports:
      - "8080:8080"
-    volumes:
-     - /home/master/ansible-docker/docker_prod/files/:/var/lib/tomcat9/webapps/
+#    volumes:
+#     - /home/master/ansible-docker/docker_prod/files/:/var/lib/tomcat9/webapps/
