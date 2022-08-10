@@ -2,16 +2,17 @@
 # tasks file for docker_prod
 - name: Ensure docker packages is present
   apt: name=docker.io state=present
+#apt install python-pip
 
 - name: Container present
   docker_container:
     name: prod
-    state: present
     image: tomcat:jre8-alpine
+    state: present
 #  copy:
 #    src: /home/master/ansible-roles/artefact_builder/files/
 #    dest: "{{dest_folder}}"
-  ports:
-   - "8080:8080"
+    ports:
+     - "8080:8080"
 #    volumes:
 #      - hello-1.0.war:{{dest_folder}}
