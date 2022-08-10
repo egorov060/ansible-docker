@@ -7,7 +7,7 @@
 - name: Container present
   docker_container:
     name: prod
-    image: tomcat:jre8-alpine
+    image: tomcat:latest
     state: present
 #  copy:
 #    src: /home/master/ansible-roles/artefact_builder/files/
