@@ -4,7 +4,7 @@
   apt: name=docker.io state=present
 
 - name: Container present
-  community.docker.docker_container:
+  docker_container:
     name: prod
     state: present
     image: tomcat:jre8-alpine
