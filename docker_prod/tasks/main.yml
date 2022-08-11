@@ -18,4 +18,4 @@
     ports:
      - "8080:8080"
     volumes:
-     - /var/lib/tomcat9/webapps/
+     - /home/master/ansible-docker/docker_prod/files/hello-1.0.war:/var/lib/tomcat9/webapps/
