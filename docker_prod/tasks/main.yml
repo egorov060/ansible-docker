@@ -6,10 +6,9 @@
 - name: Ensure python-pip packages is present
   apt: name=python-pip state=present
 
-- name: Ensure python-pip packages is present
+- name: Ensure python-py packages is present
   pip: 
-    packages: 
-    - docker-py
+    name: docker-py
 
 - name: Container present
   docker_container:
