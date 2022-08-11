@@ -9,7 +9,7 @@
 - name: Ensure python-pip packages is present
   pip: 
     install: 
-    - docker
+    - docker-py
 
 - name: Container present
   docker_container:
